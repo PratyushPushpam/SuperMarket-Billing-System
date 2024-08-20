@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <link rel="stylesheet" href="Finalbill.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#addItem">Add Item</a>
+            <a href="#printBill">Print Bill</a>
+            <a href="#summary">Summary</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>Super Market Billing System</h1>
+
+        <h2 id="addItem">Add Item</h2>
+        <form id="addItemForm">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" required>
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate" required>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            <input type="submit" value="Add Item">
+        </form>
+
+        <h2 id="printBill">Print Bill</h2>
+        <form id="printBillForm">
+            <label for="billItem">Item:</label>
+            <input type="text" id="billItem" name="billItem" required>
+            <label for="billQuantity">Quantity:</label>
+            <input type="number" id="billQuantity" name="billQuantity" required>
+            <input type="submit" value="Print Bill">
+        </form>
+
+        <button id="printHardBillButton">Print Hard Bill</button>
+        <button id="downloadPdfButton">Download PDF</button>
+        <button id="clearDataButton">Clear All Data</button>
+
+        <div class="result" id="result"></div>
+
+        <h2 id="summary">Summary</h2>
+        <div class="result" id="stockSummary"></div>
+    </div>
+
+    <footer>
+        <p>Code written by Pratyush Pushpam</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="Finalbill.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
